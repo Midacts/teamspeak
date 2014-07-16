@@ -87,6 +87,7 @@ function install_teamspeak(){
 		echo -e '\e[01;34m+++ Creating the teamspeak cronjob and init file...\e[0m'
 		ln -s $prefix/ts3server_startscript.sh /etc/init.d/teamspeak
 		echo "@reboot /etc/init.d/teamspeak start" >> /var/spool/cron/crontabs/teamspeak
+		chmod 600 /var/spool/cron/crontabs/teamspeak
 		echo -e '\e[01;37;42mThe teamspeak cronjob and init file have been successfully created!\e[0m'
 
 	# Sets folder and file permissions
